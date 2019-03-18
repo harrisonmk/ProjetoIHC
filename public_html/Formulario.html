@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/estilo.css">
+        
+    </head>
+    <body class="CorFundoFormulario">
+        
+        
+    <center>
+        
+        <form action="index.html" method="post">
+
+            
+            
+           <fieldset class="tratarFieldset" id="usuario" > <legend>Dados Pessoais</legend> 
+            
+            <label for="nome">Nome:</label></br>
+           <input type="text" id="nome" /></br>
+        
+        
+        
+        <label for="rg">RG:</label></br>
+           <input type="text" id="rg" /></br>
+           
+           <label for="cpf">CPF:</label></br>
+           <input type="text" id="cpf" /></br>
+           
+                      <label>Estado Civil: </label></br>
+           <select name="estadocivil" id="estadocivil">
+                    <option value="solteiro">Solteiro</option>
+                    <option value="casado">Casado</option>
+                    <option value="separado">Separado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viuvo">Viúvo</option>
+           </select> </br>
+           
+           
+           <label>Nacionalidade: </label></br>
+                <select name="nacionalidade" id="nacionalidade">
+
+                    <option value="afegao">Afegão</option>	
+                    <option value="africano">Africano</option>	
+                    <option value="alemao">Alemão</option>	
+                    <option value="americano">Americano</option>	
+                    <option value="argentino">Argentino</option>
+                    <option value="asiatico">Asiático</option>	
+                    <option value="australiano">Australiano</option>	
+                    <option value="austriaco">Austríaco</option>
+                    <option value="belga">Belga</option>
+                    <option value="brasileiro">Brasileiro</option>
+                    <option value="britanico">Britânico</option>
+                    <option value="canadense">Canadense</option>
+                    <option value="chileno">Chileno</option>
+                    <option value="chines">Chinês</option>
+                    <option value="colombiano">Colombiano</option>
+                    <option value="coreano">Coreano</option>
+                    <option value="croata">Croata</option>
+                    <option value="dinamarques">Dinamarquês</option>
+                    <option value="egipcio">Egípcio</option>
+                    <option value="escoces">Escocês</option>
+                    <option value="eslovaco">Eslovaco</option>
+                    <option value="espanhol">Espanhol</option>	
+                    <option value="europeu">Europeu</option>
+                    <option value="filipino">Filipino</option>	
+                    <option value="finlandes">Finlandês</option>	
+                    <option value="francesa">Francesa</option>	
+                    <option value="frances">Francês</option>
+                    <option value="grego">Grego</option>
+                    <option value="holandes">Holandês</option>	
+                    <option value="indiano">Indiano</option>
+                    <option value="ingles">Inglês</option>
+                    <option value="iraniano">Iraniano</option>
+                    <option value="iraquiano">Iraquiano</option>
+                    <option value="italiano">Italiano</option>
+                    <option value="japones">Japonês</option>
+                    <option value="mexicano">Mexicano</option>
+                    <option value="noruegues">Norueguês</option>
+                    <option value="paquistanes">Paquistanês</option>
+                    <option value="polones">Polonês</option>
+                    <option value="portugues">Português</option>
+                    <option value="russo">Russo</option>
+                    <option value="sueco">Sueco</option>
+                    <option value="sulafricano">Sul-Africano</option>
+                    <option value="sulcoreano">Sul-Coreano</option>
+                    <option value="turco">Turco</option>
+                    <option value="arabe">Árabe</option>
+
+                </select></br>
+        
+         <label for="data">Data de Nascimento:</label></br>
+        <input type="date" id="data" /></br>
+           
+          
+         </fieldset>   
+           
+
+       <fieldset class="tratarFieldset" id="dados"> <legend>Dados da conta</legend>      
+            
+         <label for="email">Email:</label></br>
+        <input type="email" id="email" /></br>
+        
+         <label for="senha">Senha:</label></br>
+         <input type="password" id="senha" /></br>
+           
+        
+        
+       
+       </fieldset>  
+           
+           
+        <fieldset class="tratarFieldset" id="contato"> <legend>Contato</legend> 
+        
+         <label for="endereco">Endereço:</label></br>
+           <input type="text" id="endereco" /></br>
+           
+            <label for="cidade">Cidade:</label></br>
+           <input type="text" id="cidade" /></br>
+           
+            <label for="estado">Estado:</label></br>
+           <input type="text" id="estado" /></br>
+           
+            <label for="telefone">Telefone:</label></br>
+           <input type="tel" id="telefone" pattern="^\d{3}-\d{5}-\d{4}$"/></br>
+           
+           
+        
+        </fieldset>
+		  
+        <input class="botao" type="submit" onClick="index.html" value="Enviar" size="50"/>
+        
+
+
+
+            
+        </form>
+        
+        </center>
+        
+    <div align="right" style="margin-right: 10px">
+        <a href="index.html" >
+            <input class="p" type="button" value="Voltar" size="500"/> 
+        </a>
+         </div>
+    
+    </body>
+</html>
