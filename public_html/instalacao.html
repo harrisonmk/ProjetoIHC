@@ -19,66 +19,86 @@ and open the template in the editor.
         <h1 class="hinterno">Guia de instalação Java</h1>
         <section class="container column ">
 
-            <div class="item">
-              <b> Download e Instalação</b>
-			  <meta name="description" content="como baixar e instalar o java">
+         <div class="lf-secao"><h3>Instalação</h3>
+
+
+
+<p>Para
+instalar o JDK no Linux ou no Windows primeiramente é necessário efetuar o
+download do arquivo de instalação. Para isso deve-se acessar o site da Oracle
+(vide seção Links) e baixar versão do JDK correspondente ao sistema operacional
+e arquitetura (32 ou 64 bits) utilizada.</p>
+
+
+
+<p>Após
+o download do arquivo de instalação ter sido concluído, a instalação do JDK é
+feita executando-se o programa de instalação. O nome do arquivo de instalação
+para o Windows tem o formato <em>jdk-&lt;versão&gt;-windows-&lt;arquitetura&gt;.exe,
+onde &lt;versão&gt; é a versão do JDK e arquitetura pode ser 32 ou 64 bits, por
+exemplo, jdk-8u66-windows-x64.exe. No </em>sistema operacional Linux o formato
+do nome é jdk-<em>&lt;versão&gt;</em>-linux-<em>&lt;arquitetura&gt;</em>.tar.gz,
+por exemplo, <em>jdk-8u66-linux-x64.tar.gz.</em></p>
+
+
+
+<p>Para
+instalar o JDK no Windows, executar o programa de instalação e clicar no botão
+Next em todas as telas apresentadas. O processo é simples e rápido. Para
+instalar o JDK no Linux executar os comandos da <b>Listagem 1</b>.</p>
  
-<p>É recomendável que você desative o firewall da Internet antes de continuar com a instalação on-line. Em alguns casos, as configurações padrão do firewall estão definidas para rejeitar instalações automáticas ou on-line, como a do Java. Se o firewall não estiver configurado corretamente, talvez ele atrase a operação de download/instalação do Java sob certas condições. Consulte o seu manual específico para obter instruções sobre como desativar seu firewall da Internet.
-</p><br />
-
-<li>Vá até a página de <a href="/pt_BR/download/manual.jsp">Download manual</a></li><br />
 
 
-<li>Clique em <b>Windows Online</b> </li><br />
+<p><b>Listagem 1</b>. Instalação do JDK no Linux</p>
 
 
-<li>A caixa de diálogo Download de Arquivo é exibida, solicitando que você execute ou salve o arquivo do download <br><br />
-
-    
-	
-       <li>Para executar o instalador, clique em <b>Executar</b>.</li><br /><br />
 
 
-       <li>Para salvar o arquivo para instalação posterior, clique em <b>Salvar</b>. <br> Selecione a localização da pasta e salve o arquivo no sistema local. <br> Dica: salve o arquivo em um local do computador que seja fácil de acessar, como a área de trabalho.<br> Para iniciar o processo de instalação, clique duas vezes no arquivo salvo.<br />
 
-       </li>
-    
-</li>
+<div class="pre_java code-sample"><div><code class="code-sample"><div><div id="highlighter_419224" class="syntaxhighlighter nogutter  java"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">- Estando no modo gráfico, abrir um Terminal</code></div><div class="line number2 index1 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number3 index2 alt2"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">- Copiar o arquivo de instalação para o diretório de sua preferência com o comando abaixo</code></div><div class="line number4 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number5 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">$ cp jdk-&lt;versão&gt;.tar.gz &lt;caminho-completo-</code><code class="java keyword">do</code><code class="java plain">-seu-diretório&gt;</code></div><div class="line number6 index5 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number7 index6 alt2"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">- Mudar para o diretório de sua preferência</code></div><div class="line number8 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number9 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">$ cd /&lt;caminho-completo-</code><code class="java keyword">do</code><code class="java plain">-seu-diretório&gt;</code></div><div class="line number10 index9 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number11 index10 alt2"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">- Descompactar o arquivo</code></div><div class="line number12 index11 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number13 index12 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">$ tar -zvxf jdk-&lt;versão&gt;.tar.gz</code></div></div></td></tr></tbody></table></div></div></code></div></div>
+ 
 
-<li>Para salvar o arquivo para instalação posterior, clique em <b>Salvar</b>. <br> Selecione a localização da pasta e salve o arquivo no sistema local.<br /> <br> Dica: salve o arquivo em um local do computador que seja fácil de acessar, como a área de trabalho.<br /> <br> Para iniciar o processo de instalação, clique duas vezes no arquivo salvo.<br />
-   <br />
-   </li>
 
-<li>O processo de instalação será iniciado. Clique no botão <b>Instalar</b> para aceitar os termos de licença e continuar com a instalação.</li><br />
-<div align="center">
-<img src="https://www.java.com/ga/images/pt_BR/java_welcome.jpg" alt="some text" height="300" width="400"></div>
-            </div>   
-            
-<span class="bodytext">
-						
-<!-- BEGIN: jWidget_C/Raw-HTML/Display -->	 
 
-<ul>
- <li>
-A Oracle é parceira de algumas empresas que oferecem diversos produtos. O instalador poderá apresentar uma opção para instalar esses programas quando você instalar o Java. Depois de verificar se os programas desejados foram selecionados, clique no botão <b>Avançar</b> para continuar com a instalação. 
-</li> <br />
-<li> Algumas caixas de diálogo confirmam as últimas etapas do processo de instalação. Clique em <b>Fechar</b> na última caixa de diálogo. Isso concluirá o processo de instalação do Java.
+<p>Outra
+maneira de instalar o JDK no Linux é usando o programa <em>apt-get </em>presente
+nas distribuições Linux. O <em>apt-get</em> é um programa que permite a
+instalação e a atualização de pacotes (programas e bibliotecas) de maneira
+simples e fácil. A <b>Listagem 2</b> mostra como instalar o JDK usando o
+apt-get.</p>
 
-<br>
-<div align="center">
-<img src="https://www.java.com/ga/images/pt_BR/java_finish.jpg">
-<br>
+
+
+
+
+
+
+<p><b>Listagem 2</b>. Instalação do JDK no Linux usando
+apt-get</p>
+
+
+
+
+
+<p></p><div class="pre_java code-sample"><div><code class="code-sample"><div><div id="highlighter_494367" class="syntaxhighlighter nogutter  java"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">- Estando no modo gráfico, abrir um Terminal e digitar os comandos abaixo</code></div><div class="line number2 index1 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number3 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">$ sudo add-apt-repository ppa:webupd8team/java</code></div><div class="line number4 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">$ sudo apt-get update</code></div><div class="line number5 index4 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">$ sudo apt-get install oracle-java8-installer</code></div></div></td></tr></tbody></table></div></div></code></div></div><p></p>
+ 
+
+
+
+<p>O
+comando <em>add-apt-repository</em> adiciona o
+local <em>ppa:webupd8team/java</em> no
+repositório do apt-get. Em seguida o repositório é atualizado com o comando <em>apt-get update</em>. O comando <em>apt-get install</em> irá instalar o pacote
+JDK 8 da Oracle.</p>
+
+
+<div class="videoWrapper" style="margin-top:20px"><iframe width="560" height="315" src="https://www.youtube.com/embed/KXTOVbj2NEE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="height: 343.125px; width: 610px;"></iframe></div>
+
+
+<p class="destaque-link-conteudo">Curso: 
+        <a href="https://www.devmedia.com.br/curso/criando-um-servico-restful-com-java/1465" target="_blank" title="Criando um serviço Restful em Java">Criando um serviço Restful em Java</a></p>
+
 </div>
-</li>
-
-
-
-
-<!-- END: jWidget_C/Raw-HTML/Display -->
-
-				
-	
-	
 
 
 
