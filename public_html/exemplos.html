@@ -6,11 +6,980 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Frameworks</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
+
+        <link rel="stylesheet" href="css/estilo.css">
+
+  <body>
+
+<h1 align="center"><font color="#0000ff">Introdução à Linguagem Java Através de
+Exemplos</font></h1>
+
+<h2>Objetivos da Seção</h2>
+
+<ul>
+  <li>Queremos introduzir a linguagem Java básica (sem uso de orientação a objeto) através
+    de alguns exemplos simples </li>
+  <li>O aluno deve entender, neste momento, que Java é apenas uma outra linguagem de
+    programação, mas possuindo de sintaxe diferente da linguagem vista em Programação I
+    (Python, Pascal, ...)</li>
+  <li>Mais tarde, veremos que Java é, na realidade, substancialmente diferente de Python</li>
+  <li>Queremos ver como Java trata <ul>
+      <li>Tipos básicos </li>
+      <li>Constantes </li>
+      <li>Decisões </li>
+      <li>Laços </li>
+      <li>Compilação e execução de programas </li>
+      <li>IDE - Integrated Development Environment (Eclipse) </li>
+    </ul>
+  </li>
+  <li>Observe que <em>não</em> veremos chamadas de sub-programas (subrotinas ou funções)
+    aqui <ul>
+      <li>Este assunto é bem diferente em Java, devido à orientação a objeto, e será visto à
+        frente </li>
+    </ul>
+  </li>
+  <li><font color="#0080ff">Importante! <em>Você</em> é responsável por aprender detalhes
+    adicionais da linguagem Java. O que faremos em aula não é uma cobertura completa da
+    linguagem.</font> </li>
+</ul>
+
+<h2>Por que Java?</h2>
+
+<ul>
+  <li>Linguagem <em>muito</em> poderosa embora simples </li>
+  <li>Permite portabilidade </li>
+  <li>Muito usada em programação em rede <ul>
+      <li>Server Programming </li>
+      <li>Aplicações de e-commerce, e-business, etc. </li>
+      <li>Aplicações para acesso via Internet, intranet, etc. </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Um primeiro programa: Hello, World!</h2>
+
+<textarea name="myForm" rows="4" cols="40" wrap="virtual">-
+<pre class="clsCode">package p2.exemplos;
+
+/*
+ * O primeiro programa em Java: Hello World
+ * Autor: Jacques Sauvé
+ */
+
+// Todo programa tem um ponto de entrada: o "método" main de alguma "classe"
+public class Hello {
+  public static void main(String[] args) {
+    System.out.println("Hello, world!");
+  }
+}</pre>
+</textarea>
+
+<ul>
+  <li>Observações segue ...</li>
+  <li>A linha ...</li>
+</ul>
+
+<pre class="clsCode">package p2.exemplos;</pre>
+
+<ul>
+  <li>... é usada para indicar que este programa faz parte de um "pacote" que pode
+    conter vários programas<ul>
+      <li>É uma forma de organizar vários programas, da mesma forma que "pastas" ou
+        "diretórios" são usados para organizar arquivos num sistema de arquivos</li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li>Dois tipos de comentários (há mais um tipo a ser visto adiante) </li>
+  <li>Esqueça, por enquanto, o que significam "public", "classe",
+    "static", "void" e "método" <ul>
+      <li>"Método" é semelhante a "module" em Python </li>
+      <li>Outgros nomes: subrotina, função, procedimento, procedure, ...</li>
+    </ul>
+  </li>
+  <li>O nome do programa é Hello <ul>
+      <li>Por convenção, deve iniciar com uma letra maiúscula </li>
+      <li>Observe que o programa Hello está obrigatoriamente armazenado no arquivo Hello.java </li>
+      <li>Java é "case-sensitive" (reconhece diferença de caixa) </li>
+    </ul>
+  </li>
+  <li>Até entender detalhes, sempre use as primeiras duas linhas de código do exemplo acima,
+    trocando apenas o nome do programa (Hello) </li>
+  <li>"{" significa "BEGIN" e "}" significa "END" </li>
+  <li>Observe a forma de imprimir </li>
+  <li>Observe a formação de uma constante do tipo string ("Hello, world!") </li>
+</ul>
+
+<ul>
+  <li>Vamos compilar o programa (no Windows, UNIX, etc.) <ul>
+      <li>Isso é desnecessário em Python que é interpretado</li>
+    </ul>
+  </li>
+</ul>
+
+<pre class="clsCode">javac Hello.java</pre>
+
+<ul>
+  <li>O comando javac é o compilador Java <ul>
+      <li>O resultado deve estar no arquivo Hello.class (verifique) </li>
+    </ul>
+  </li>
+  <li>Agora, vamos executar o programa: </li>
+</ul>
+
+<pre class="clsCode">java Hello</pre>
+
+<ul>
+  <li>O comando java é a "Java Virtual Machine" (JVM) que sabe executar um programa
+    Java compilado com o comando java e presente no arquivo Hello.class <ul>
+      <li>Isso é diferente de outras linguagens (C, C++) que são diretamente executáveis após
+        a compilação</li>
+      <li>Motivo: independência de plataforma: Um programa em Java executa em qualquer lugar onde
+        houver uma JVM, sem recompilação </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li>A saída é: </li>
+</ul>
+
+<pre class="clsCode">Hello, world!</pre>
+
+<ul>
+  <li>Observe que a saída é "a caractere" <ul>
+      <li>É possível fazer interfaces gráficas com Java mas não falaremos disso </li>
+      <li>A disciplina de laboratórios tratará do assunto </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li>É possível usar ambientes integrados de desenvolvimento (IDE) para programar e depurar
+    em Java <ul>
+      <li>Eclipse é particularmente popular </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Um segundo programa: entrada de dados, tipos básicos, variáveis, decisões simples</h2>
+
+<ul>
+  <li>Ler 3 números inteiros da entrada, imprimir o menor e o maior. </li>
+ 
+<textarea name="myForm" rows="4" cols="40" wrap="virtual">-
+class="clsCode">package p2.exemplos;
+
+import java.util.Scanner;
+
+/*
+ * "Ler 3 números inteiros da entrada, imprimir o menor e o maior"
+ *
+ * Autor: Jacques Sauvé
+ */
+
+public class MinMax1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n1, n2, n3;
+
+        System.out.print("Entre com o primeiro inteiro: ");
+        n1 = sc.nextInt();
+        System.out.print("Entre com o segundo inteiro: ");
+        n2 = sc.nextInt();
+        System.out.print("Entre com o terceiro inteiro: ");
+        n3 = sc.nextInt();
+        if (n1 &gt; n2) {
+            if (n1 &gt; n3) {
+                if (n2 &lt; n3) {
+                    System.out.println("O menor numero eh: " + n2);
+                } else {
+                    System.out.println("O menor numero eh: " + n3);
+                }
+                System.out.println("O maior numero eh: " + n1);
+            } else {
+                if (n1 &lt; n2) {
+                    System.out.println("O menor numero eh: " + n1);
+                } else {
+                    System.out.println("O menor numero eh: " + n2);
+                }
+                System.out.println("O maior numero eh: " + n3);
+            }
+        } else {
+            if (n2 &gt; n3) {
+                if (n1 &lt; n3) {
+                    System.out.println("O menor numero eh: " + n1);
+                } else {
+                    System.out.println("O menor numero eh: " + n3);
+                }
+                System.out.println("O maior numero eh: " + n2);
+            } else {
+                if (n1 &lt; n2) {
+                    System.out.println("O menor numero eh: " + n1);
+                } else {
+                    System.out.println("O menor numero eh: " + n2);
+                }
+                System.out.println("O maior numero eh: " + n3);
+            }
+        }
+    }
+}
+</textarea>
+<ul>
+  <li>Como compilar e rodar o programa </li>
+</ul>
+
+<pre class="clsCode">javac MinMax1.java
+java MinMax1</pre>
+
+<ul>
+  <li>Uma saída típica: </li>
+</ul>
+
+<pre class="clsCode">Entre com o primeiro inteiro: 3
+Entre com o segundo inteiro: 9
+Entre com o terceiro inteiro: 123
+O menor numero eh: 3
+O maior numero eh: 123</pre>
+
+<ul>
+  <li>A linha ... </li>
+</ul>
+
+<pre class="clsCode">import java.util.Scanner;</pre>
+
+<ul>
+  <li>... é usada para dizer ao Java que usaremos alguma coisa externa ao nosso programa (a
+    "classe" <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Scanner.html">Scanner</a>) </li>
+  <li>A linha ...</li>
+</ul>
+
+<pre class="clsCode">Scanner sc = new Scanner(System.in);</pre>
+
+<ul>
+  <li>... cria um "Scanner" que é usado para ler dados da entrada<ul>
+      <li>Os detalhes (o que significa "new", etc. serão explicados adiante)</li>
+    </ul>
+  </li>
+  <li>A linha ... </li>
+</ul>
+
+<pre class="clsCode">    int n1, n2, n3;</pre>
+
+<ul>
+  <li>... declara três variáveis inteiras para uso posterior <ul>
+      <li>Por convenção, variáveis iniciam com letra minúscula </li>
+    </ul>
+  </li>
+  <li>A linha ... </li>
+</ul>
+
+<pre class="clsCode">    n1 = sc.nextInt();</pre>
+
+<ul>
+  <li>... lê um inteiro da entrada</li>
+  <li>Também poderíamos ter feito assim: </li>
+</ul>
+
+<pre class="clsCode">    int n1 = sc.nextInt();</pre>
+
+<ul>
+  <li>As linhas ... </li>
+</ul>
+
+<pre class="clsCode">        if(n2 &lt; n3) {
+          System.out.println("O menor numero eh: " + n2);
+        } else {
+          System.out.println("O menor numero eh: " + n3);
+        }</pre>
+
+<ul>
+  <li>... mostram uma decisão </li>
+  <li>Duas dessas linhas também mostram a concatenação de strings com o operador + <ul>
+      <li>Falamos que, em Java, o operador "+" está <font color="#0080ff">overloaded </font>porque
+        ele significa adição de números e também concatenação de strings, dependendo dos
+        seus operandos </li>
+      <li>É o único operador que sofre overload </li>
+    </ul>
+  </li>
+ 
+</ul>
+
+
+<textarea name="myForm" rows="4" cols="40" wrap="virtual">-
+package p2.exemplos;
+import java.util.Scanner;
+
+/*
+ * "Ler 3 números inteiros da entrada, imprimir o menor e o maior"
+ *
+ * Autor: Jacques Sauvé
+ */
+
+public class MinMax2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n1, n2, n3;
+
+        System.out.print("Entre com o primeiro inteiro: ");
+        n1 = sc.nextInt();
+        System.out.print("Entre com o segundo inteiro: ");
+        n2 = sc.nextInt();
+        System.out.print("Entre com o terceiro inteiro: ");
+        n3 = sc.nextInt();
+
+        int mínimo;
+        int máximo;
+        if (n1 &gt; n2) {
+            if (n1 &gt; n3) {
+                if (n2 &lt; n3) {
+                    mínimo = n2;
+                } else {
+                    mínimo = n3;
+                }
+                máximo = n1;
+            } else {
+                if (n1 &lt; n2) {
+                    mínimo = n1;
+                } else {
+                    mínimo = n2;
+                }
+                máximo = n3;
+            }
+        } else {
+            if (n2 &gt; n3) {
+                if (n1 &lt; n3) {
+                    mínimo = n1;
+                } else {
+                    mínimo = n3;
+                }
+                máximo = n2;
+            } else {
+                if (n1 &lt; n2) {
+                    mínimo = n1;
+                } else {
+                    mínimo = n3;
+                }
+                máximo = n3;
+            }
+        }
+        System.out.println("O menor numero eh: " + mínimo);
+        System.out.println("O maior numero eh: " + máximo);
+    }</textarea>
+}
+
+<ul>
+  <li>Observe que estamos usando acentuação variáveis com acentuação <ul>
+      <li>Isso é possível porque Java usa Unicode como código de caracteres </li>
+    </ul>
+  </li>
+  <li>Perguntas sobre o programa acima <ul>
+      <li>Você achou o programa "bem escrito"? </li>
+      <li>É fácil de entender? </li>
+      <li>É fácil trocar as mensagenms de saída por outras? </li>
+      <li>É fácil assegurar-se de que não há bug? <ul>
+          <li>Na realidade, um dos programas acima tem um bug: ache o! </li>
+        </ul>
+      </li>
+      <li>É fácil estender para 4 números lidos na entrada? </li>
+    </ul>
+  </li>
+  
+  </li>
+</ul>
+
+<textarea name="myForm" rows="4" cols="40" wrap="virtual">-
+package p2.exemplos;
+
+import java.util.Scanner;
+
+/*
+ * "Ler 3 números inteiros da entrada, imprimir o menor e o maior"
+ *
+ * Autor: Jacques Sauvé
+ */
+
+public class MinMax3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num;
+        int mínimo = Integer.MAX_VALUE;
+        int máximo = Integer.MIN_VALUE;
+
+        System.out.print("Entre com o primeiro inteiro: ");
+        num = sc.nextInt();
+        if (num &lt; mínimo) {
+            mínimo = num;
+        }
+        if (num &gt; máximo) {
+            máximo = num;
+        }
+
+        System.out.print("Entre com o segundo inteiro: ");
+        num = sc.nextInt();
+        if (num &lt; mínimo) {
+            mínimo = num;
+        }
+        if (num &gt; máximo) {
+            máximo = num;
+        }
+
+        System.out.print("Entre com o terceiro inteiro: ");
+        num = sc.nextInt();
+        if (num &lt; mínimo) {
+            mínimo = num;
+        }
+        if (num &gt; máximo) {
+            máximo = num;
+        }
+
+        System.out.println("O menor numero eh: " + mínimo);
+        System.out.println("O maior numero eh: " + máximo);
+    }
+}
+ </textarea>
+
+<ul>
+  <li>É muito mais limpo, não é? <ul>
+      <li>Explique por quê </li>
+    </ul>
+  </li>
+  
+  </li>
+</ul>
+
+<textarea name="myForm" rows="4" cols="40" wrap="virtual">-package p2.exemplos;
+
+import java.util.Scanner;
+
+/*
+ * "Ler 3 números inteiros da entrada, imprimir o menor e o maior"
+ *
+ * Autor: Jacques Sauvé
+ */
+
+public class MinMax4 {
+    public static void main(String[] args) {
+        final int NÚMEROS_A_LER = 3;
+        Scanner sc = new Scanner(System.in);
+        int mínimo = Integer.MAX_VALUE;
+        int máximo = Integer.MIN_VALUE;
+
+        for (int i = 0; i &lt; NÚMEROS_A_LER; i++) {
+            System.out.print("Entre com o proximo inteiro: ");
+            int num = sc.nextInt();
+            if (num &lt; mínimo) {
+                mínimo = num;
+            }
+            if (num &gt; máximo) {
+                máximo = num;
+            }
+        }
+
+        System.out.println("O menor numero eh: " + mínimo);
+        System.out.println("O maior numero eh: " + máximo);
+    }
+}</textarea>
+
+<ul>
+  <li>NÚMEROS_A_LER é declarado como "final" para indicar que é uma constante <ul>
+      <li>Como "const" em Pascal ou C </li>
+      <li>Por convenção, usam-se letras maiúsculas para constantes (como em Python, C, C++)</li>
+      <li>Melhor usar constantes simbólicas do que contantes numéricas <ul>
+          <li>Programa fica mais simples de entender </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Observe como fazer um laço "for" na linha: </li>
+</ul>
+
+<pre class="clsCode">    for(int i = 0; i &lt; NÚMEROS_A_LER; i++) {</pre>
+
+<ul>
+  <li>A expressão ... </li>
+</ul>
+
+<pre class="clsCode">    i++</pre>
+
+<ul>
+  <li>... significa ... </li>
+</ul>
+
+<pre class="clsCode">    i = i + 1</pre>
+
+<ul>
+  <li>Observe também onde a variável "num" foi declarada: </li>
+</ul>
+
+<pre class="clsCode">            int num = sc.nextInt();</pre>
+
+<ul>
+  <li>De forma geral, é bom declarar uma variável perto de onde ela é usada <ul>
+      <li>Fizemos a mesma coisa com a declaração da variável do laço (i) </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Um terceiro programa: tipos primitivos, limites de representação, constantes,
+operadores e expressões</h2>
+
+<ul>
+  <li>Primeiro, um pouco de teoria ... </li>
+</ul>
+
+<h3>Tipos primitivos, limites de representação e constantes</h3>
+
+<table width="100%" border="1">
+<tbody>
+  <tr>
+    <td width="15%"><strong>Tipo primitivo</strong></td>
+    <td width="12%"><strong>Tamanho</strong></td>
+    <td width="16%"><strong>Mínimo</strong></td>
+    <td width="18%"><strong>Máximo</strong></td>
+    <td width="39%"><strong>Exemplos de Constantes</strong></td>
+  </tr>
+  <tr>
+    <td width="15%"><font face="Courier New">boolean</font></td>
+    <td width="12%"><font face="Courier New">1 bit</font></td>
+    <td width="16%"><font face="Courier New">-</font></td>
+    <td width="18%"><font face="Courier New">-</font></td>
+    <td width="39%"><font face="Courier New">true, false</font></td>
+  </tr>
+  <tr>
+    <td width="15%"><font face="Courier New">char</font></td>
+    <td width="12%"><font face="Courier New">16 bits</font></td>
+    <td width="16%"><font face="Courier New">Unicode 0</font></td>
+    <td width="18%"><font face="Courier New">Unicode 65.535</font></td>
+    <td width="39%"><font face="Courier New">'a' (letra a)</font></td>
+  </tr>
+  <tr>
+    <td width="15%"><font face="Courier New">byte</font></td>
+    <td width="12%"><font face="Courier New">8 bits</font></td>
+    <td width="16%"><font face="Courier New">-128</font></td>
+    <td width="18%"><font face="Courier New">+127</font></td>
+    <td width="39%"><font face="Courier New">97, -23<br>
+    0x65 (hexadecimal)<br>
+    </font></td>
+  </tr>
+  <tr>
+    <td width="15%"><font face="Courier New">short</font></td>
+    <td width="12%"><font face="Courier New">16 bits</font></td>
+    <td width="16%"><font face="Courier New">-2<sup>15 </sup>(-32.768)</font></td>
+    <td width="18%"><font face="Courier New">+2<sup>15</sup>-1(32.767)</font></td>
+    <td width="39%"><font face="Courier New">17569, -21875</font></td>
+  </tr>
+  <tr>
+    <td width="15%"><font face="Courier New">int</font></td>
+    <td width="12%"><font face="Courier New">32 bits</font></td>
+    <td width="16%"><font face="Courier New">-2<sup>31</sup><br>
+    (uns -2 bi)</font></td>
+    <td width="18%"><font face="Courier New">+2<sup>31</sup>-1<br>
+    (uns 2 bi)</font></td>
+    <td width="39%"><font face="Courier New">1876345240, -2000000000</font></td>
+  </tr>
+  <tr>
+    <td width="15%"><font face="Courier New">long</font></td>
+    <td width="12%"><font face="Courier New">64 bits</font></td>
+    <td width="16%"><font face="Courier New">-2<sup>63</sup> <br>
+    (uns -9 quintilhões)</font></td>
+    <td width="18%"><font face="Courier New">+2<sup>63</sup>-1<br>
+    (uns 9 quintilhões)</font></td>
+    <td width="39%"><font face="Courier New">123981723971982318273L,<br>
+    -12381726387613678688L,<br>
+    97L, -23L, 0L<br>
+    (Observe o 'L' final)</font></td>
+  </tr>
+  <tr>
+    <td width="15%"><font face="Courier New">float</font></td>
+    <td width="12%"><font face="Courier New">32 bits</font></td>
+    <td width="16%"><font face="Courier New">aprox -10<sup>38</sup> <br>
+    (6-7 dígitos significativos)</font></td>
+    <td width="18%"><font face="Courier New">aprox +10<sup>38</sup> <br>
+    (6-7 dígitos significativos)</font></td>
+    <td width="39%"><font face="Courier New">-3.4F<br>
+    45.78E+23F<br>
+    (Observe o 'F' final)</font></td>
+  </tr>
+  <tr>
+    <td width="15%"><font face="Courier New">double</font></td>
+    <td width="12%"><font face="Courier New">64 bits</font></td>
+    <td width="16%"><font face="Courier New">aprox -10<sup>308</sup> <br>
+    (15 dígitos significativos)</font></td>
+    <td width="18%"><font face="Courier New">aprox +10<sup>308</sup> <br>
+    (15 dígitos significativos)</font></td>
+    <td width="39%"><font face="Courier New">-3.4<br>
+    45.78E+23</font></td>
+  </tr>
+  <tr>
+    <td width="15%"><font face="Courier New">void</font></td>
+    <td width="12%"><font face="Courier New">-</font></td>
+    <td width="16%"><font face="Courier New">-</font></td>
+    <td width="18%"><font face="Courier New">-</font></td>
+    <td width="39%"><font face="Courier New">indica ausência de tipo<br>
+    (quando um "método" nada retorna)</font></td>
+  </tr>
+</tbody>
+</table>
+
+<ul>
+  <li>A conversão entre tipos (quando possível) é feita com cast: </li>
+</ul>
+
+<pre class="clsCode">  double x = 8.89;
+  int n = (int)x; // n terá valor 8</pre>
+
+<h3>Operadores</h3>
+
+<ul>
+  <li>Operadores matemáticos <ul>
+      <li>+ (soma) </li>
+      <li>- (subtração) </li>
+      <li>* (multiplicação) </li>
+      <li>/ (divisão) </li>
+      <li>% (módulo) </li>
+      <li>Há operadores unários - e + </li>
+      <li>Operadores binários podem ser seguido de =, tal como na seguinte expressão: </li>
+    </ul>
+  </li>
+</ul>
+
+<pre class="clsCode">  soma += nota*peso; // equivalente a soma = soma + nota*peso</pre>
+
+<ul>
+  <li>Operador de String <ul>
+      <li>+ (overload do operador par concatenar strings) </li>
+    </ul>
+  </li>
+  <li>Operadores de auto-incremento e auto-decremento </li>
+</ul>
+
+<pre class="clsCode">  númeroDeAlunos++; // equivalente a númeroDeAlunos = númeroDeAlunos + 1
+  númeroDeAlunos--; // equivalente a númeroDeAlunos = númeroDeAlunos - 1
+  if(númeroDeAlunos-- &gt; 0) // equivalente a testar númeroDeAlunos e depois decrementar
+  if(--númeroDeAlunos &gt; 0) // equivalente a decrementar e depois testar númeroDeAlunos</pre>
+
+<ul>
+  <li>Operadores relacionais <ul>
+      <li>&lt; (menor) </li>
+      <li>&lt;= (menor ou igual) </li>
+      <li>&gt; (maior) </li>
+      <li>&gt;= (maior ou igual) </li>
+      <li>== (igual) </li>
+      <li>!= (não igual) </li>
+    </ul>
+  </li>
+  <li>Operadores lógicos <ul>
+      <li>&amp;&amp; (AND) </li>
+      <li>|| (OR) </li>
+      <li>! (NOT) </li>
+      <li>Exemplos: </li>
+    </ul>
+  </li>
+</ul>
+
+<pre class="clsCode">  if(númeroDeAlunos &gt; MAX_ALUNOS || númeroDeProfessores &gt; MAX_PROFS) ...
+  if(ano % 4 == 0 &amp;&amp; ano % 100 != 0 || ano % 400 == 0) ... // ano bissexto</pre>
+
+<ul>
+  <li>Operadores de bits e de deslocamento <ul>
+      <li>&amp;, &amp;=, |, |=, ^, ^=, ~ </li>
+      <li>Não falaremos deles aqui </li>
+    </ul>
+  </li>
+  <li>Operador ternário <ul>
+      <li>Para escrever uma operação condicional sem usar if-else </li>
+      <li>Exemplo segue </li>
+    </ul>
+  </li>
+</ul>
+
+<pre class="clsCode">  // a linha seguinte
+  média = númeroDeNotas == 0 ? 0.0 : soma/númeroDeNotas;
+  // é equivalente às linhas seguintes
+  if(númeroDeNotas == 0) {
+    média = 0.0;
+  } else {
+    média = soma/númeroDeNotas;
+  }</pre>
+
+<ul>
+  <li>Expressões complexas e precedência de operadores <ul>
+      <li>A precedência dos operadores pode ser vista na tabela abaixo, a qual <em>não</em> deve
+        se decorada </li>
+      <li>Observe que a tabela contém operadores que ainda não mencionamos </li>
+    </ul>
+  </li>
+</ul>
+
+<table width="100%" border="1">
+<tbody>
+  <tr>
+    <td width="50%">Operadores</td>
+    <td width="50%">Precedência</td>
+    <td width="50%">Associatividade</td>
+  </tr>
+  <tr>
+    <td width="50%">[] . ()</td>
+    <td width="50%">Mais alta</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">! ~ ++ -- + (unário) - (unário) (cast) new</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="esq.gif (933 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/esq.gif" width="36" oldref="intro_arquivos/esq.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">* / %</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">+ -</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">&lt;&lt; &gt;&gt; &gt;&gt;&gt;</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">&lt; &lt;= &gt; &gt;= instanceof</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">== !=</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">&amp;</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">^</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">|</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">&amp;&amp;</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">||</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">?:</td>
+    <td width="50%">&nbsp;</td>
+    <td width="50%"><img height="35" alt="dir.gif (503 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/dir.gif" width="36" oldref="intro_arquivos/dir.gif"></td>
+  </tr>
+  <tr>
+    <td width="50%">= += -= *= /= %= &amp;= |= ^= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;=</td>
+    <td width="50%">Mais baixa</td>
+    <td width="50%"><img height="35" alt="esq.gif (933 bytes)" src="http://www.dsc.ufcg.edu.br/~jacques/cursos/p2/html/intro/esq.gif" width="36" oldref="intro_arquivos/esq.gif"></td>
+  </tr>
+</tbody>
+</table>
+
+<ul>
+  <li>De forma geral, as precedências "esperadas" funcionam, como mostra o exemplo
+    abaixo </li>
+</ul>
+
+<pre class="clsCode">  // a linha seguinte
+  if(númeroDeAlunos &gt; MAX_ALUNOS || númeroDeProfessores &gt; MAX_PROFS) ...
+  // não precisa de parênteses, pois é equivalente a
+  if((númeroDeAlunos &gt; MAX_ALUNOS) || (númeroDeProfessores &gt; MAX_PROFS)) ...</pre>
+
+<ul>
+  <li>Na dúvida sobre precedências, use parênteses </li>
+</ul>
+
+<h3>Um programa exemplo</h3>
+
+<ul>
+  <li>Segue um programa que ajuda a planejar sua aposentadoria (será que jovens de 18 anos
+    pensam nisso???) </li>
+  <li>Esta solução está no arquivo <a href="../src/p2/exemplos/Aposentadoria.java" oldref="../jacques/p2/html/src/Aposentadoria.java">Aposentadoria.java</a> </li>
+</ul>
+
+<textarea name="myForm" rows="4" cols="40" wrap="virtual">- class="clsCode">package p2.exemplos;
+
+import java.util.Scanner;
+
+/*
+ * Planejamento de aposentadoria
+ *
+ * Autor: Jacques Sauvé (roubado de CoreJava)
+ */
+
+public class Aposentadoria {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double alvo;
+        double juros;
+        double contribuição;
+        int anos = 0;
+        double saldo = 0;
+
+        // exercicio: verifique valores informados abaixo são aceitáveis
+        System.out.print("Quanto dinheiro voce quer para se aposentar? ");
+        alvo = sc.nextDouble();
+        System.out.print("Quanto dinheiro voce vai contribuir todo ano?");
+        contribuição = sc.nextDouble();
+        System.out
+                .print("Taxa de juros em % (exemplo: digite 7.5 para 7.5%): ");
+        juros = sc.nextDouble() / 100;
+
+        while (saldo &lt; alvo) {
+            saldo = (saldo + contribuição) * (1 + juros);
+            anos++;
+        }
+
+        System.out.println("Voce pode se aposentar em " + anos + " anos.");
+    }
+}</textarea>
+
+<h2>Um quarto programa: arrays</h2>
+
+<ul>
+  <li>Java tem arrays unidimensionais e multidimensionais </li>
+  <li>Segue um programa que lê 10 números e os imprime em ordem inversa </li>
+  <li>Esta solução está no arquivo <a href="../src/p2/exemplos/Inverte.java" oldref="../jacques/p2/html/src/Inverte.java">Inverte.java</a> </li>
+</ul>
+
+<textarea name="myForm" rows="4" cols="40" wrap="virtual">-class="clsCode">package p2.exemplos;
+
+import java.util.Scanner;
+
+/*
+ * Ler 10 números inteiros da entrada, imprimir em ordem inversa
+ *
+ * Autor: Jacques Sauvé
+ */
+
+public class Inverte {
+    public static void main(String[] args) {
+        final int NÚMEROS_A_LER = 10;
+        Scanner sc = new Scanner(System.in);
+        int[] números = new int[NÚMEROS_A_LER]; // criação do array de 10
+                                                // inteiros
+
+        for (int i = 0; i &lt; números.length; i++) {
+            System.out.print("Entre com o proximo inteiro: ");
+            números[i] = sc.nextInt();
+        }
+        for (int i = números.length - 1; i &gt;= 0; i--) {
+            System.out.println(números[i]);
+        }
+    }
+}</textarea>
+
+<ul>
+  <li>Observe que arrays são sempre indexados a partir de zero </li>
+  <li>Precisa saber o tamanho para criar o array </li>
+  <li>números.length é o número de elementos no array números </li>
+  <li>No laço, é preferível usar números.length a usar o número 10 <ul>
+      <li>Por quê? </li>
+    </ul>
+  </li>
+  <li>Segue um programa que ecoa os argumentos de linha de comando </li>
+  <li>Esta solução está no arquivo <a href="../src/p2/exemplos/Eco.java" oldref="../jacques/p2/html/src/Eco.java">Eco.java</a> </li>
+</ul>
+
+<textarea name="myForm" rows="4" cols="40" wrap="virtual">-class="clsCode">package p2.exemplos;
+
+/*
+ * Ecoar argumentos de linha de comando
+ *
+ * Autor: Jacques Sauvé
+ */
+
+public class Eco {
+    public static void main(String[] args) {
+        for (int i = 0; i &lt; args.length; i++) {
+            System.out.print(args[i] + " ");
+        }
+        System.out.println();
+        for (int i = 0; i &lt; args.length; i++) {
+            System.out.println(args[i]);
+        }
+    }
+}</textarea>
+
+<ul>
+  <li>Observe que args é um array normal, composto de Strings </li>
+  <li>Segue um programa que mostra uma forma de inicializar arrays </li>
+  <li>Esta solução está no arquivo <a href="../src/p2/exemplos/Dia.java" oldref="../jacques/p2/html/src/Dia.java">Dia.java</a> </li>
+</ul>
+
+<textarea name="myForm" rows="4" cols="40" wrap="virtual">- class="clsCode">package p2.exemplos;
+
+/*
+ * Imprime o dia da semana correspondendo ao argumento de linha de comando
+ *
+ * Autor: Jacques Sauvé
+ */
+
+public class Dia {
+    public static void main(String[] args) {
+        final int DIAS_NA_SEMANA = 7;
+        final String[] diasDaSemana = { "", "Domingo", "Segunda", "Terca",
+                "Quarta", "Quinta", "Sexta", "Sabado" };
+        if (args.length != 1) {
+            System.err.println("Sintaxe: Dia numero");
+            System.exit(1);
+        }
+        int dia = Integer.parseInt(args[0]);
+        if (dia &lt; 1 || dia &gt; DIAS_NA_SEMANA) {
+            System.err.println("O dia da semana deve estar entre 1 e "
+                    + DIAS_NA_SEMANA);
+            System.exit(1);
+        }
+        System.out.println(diasDaSemana[dia]);
+    }
+}</textarea>
+
+<ul>
+  <li>Observações <ul>
+      <li>A inicialização do array diaDaSemana já calcula o tamanho necessário </li>
+      <li>É recomendado usar System.err em vez de System.out para imprimir erros </li>
+      <li>System.exit(0) é usado para terminar o programa "bem" </li>
+      <li>System.exit(1) é usado para terminar o programa "mal" </li>
+      <li>Integer.parseInt(xpto) converte o string xpto a um inteiro </li>
+    </ul>
+  </li>
+  <li>Teste: retire o teste da seguinte linha ... </li>
+</ul>
+
+<pre class="clsCode">    if(dia &lt; 1 || dia &gt; 7) {</pre>
+
+<ul>
+  <li>... e veja o que ocorre com argumento 8 </li>
+      <li>Você poderá não entender tudo que está aí agora, mas volte a ler este material
+        sobre entrada e saída de vez em quando ao longo da disciplina. Você entederá mais a
+        cada leitura </li>
+    </ul>
+  </li>
+ 
+
+
+
+</body>
     </body>
 </html>
