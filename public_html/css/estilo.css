@@ -1,6 +1,6 @@
 *{
-  padding:0;
-  margin:0;
+    padding:0;
+    margin:0;
 }
 
 .fundo{
@@ -8,83 +8,232 @@
     width: 100%;
     height: 100vh;
     padding: 100px 0;
-     background-image: url("../imagens/java3.png");
-     background-position: 30% 45%;
+    background-image: url("../imagens/java3.png");
+    background-position: 30% 45%;
     background-size: cover;
-     
-     
-     
+
+
+
 }
 
 .CorFundoFormulario{
-    
-   background-color: #FAFAD2; 
+
+    background-color: #FAFAD2; 
 }
 
 .lista{
-    
-  padding: 0 10px;
-  margin: 0 10px;
-  background: black;
-  color: #fff;
-  float: left;  
-    
+
+    padding: 0 10px;
+    margin: 0 10px;
+    background: black;
+    color: #fff;
+    float: left;  
+
 }
 
 
 .vertical-menu {
-  width: 200px;
+    width: 200px;
 }
 
 .vertical-menu a {
-  background-color:#eee;
-  color: black;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
+    background-color:#eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
 }
 
 .vertical-menu a:hover {
-  background-color: #FF00FF;
+    background-color: #FF00FF;
 }
 
 .vertical-menu a.active {
-  background-color: #EEDD82;
-  color: white;
+    background-color: #EEDD82;
+    color: white;
 }
 
 
 .tratarFieldset {
-    
+
     width: 50%;
     padding: 40px;
-    
+
 }
 
 .tratarFieldset1 {
-    
-   width: 60%;
+
+    width: 60%;
     padding: 50px; 
-    
+
 }
 
 
 .botao{
-    
-width: 100px;
-height: 50px;
-background-color: violet;
-font-size: 20px;
 
-    
+    width: 100px;
+    height: 50px;
+    background-color: violet;
+    font-size: 20px;
+
+
 }
 
 .p{
- 
- width: 100px;
-height: 50px;
-background-color: violet;
-font-size: 20px;   
- margin-bottom: 100px;   
-    
+
+    width: 100px;
+    height: 50px;
+    background-color: violet;
+    font-size: 20px;   
+    margin-bottom: 100px;   
+
 }
+
+
+.caracteristicas {
+
+    background-color:#191c03; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:  100px 50px;
+
+}
+
+.caracteristicas h3 {
+
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color:#fff;
+    text-align: center;
+}
+
+.caracteristicas p{
+
+    max-width: 800px;
+    margin-bottom: 35px;  
+    color:#fff;
+    text-align: center;
+
+
+}
+
+.caracteristicas hr {
+
+    width: 200px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 70px;
+    border: none;
+
+}
+
+.caracteristicas .grid {
+
+    width: 100%;
+    display: flex;
+
+
+}
+
+.caracteristicas .grid li{
+
+    padding: 0 30px;
+    text-align: center;
+
+}
+
+.caracteristicas .grid li i{
+
+    color: #c3c63b;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+
+}
+
+.caracteristicas .grid li h4{
+
+    font-size: 1.5rem;
+    color: #c3c63b;
+    margin-bottom: 30px;
+
+}
+
+.caracteristicas .grid li p{
+
+    color: #fff;   
+
+}
+@media(max-width: 850px) { /* deixa responsivo  */
+
+    .caracteristicas .grid{
+
+        flex-direction: column;   
+
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.ehH1 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color:black;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid #ccc;
+}
+
+.item {
+    /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+    flex: 1;
+    margin: 100px;
+    background: #E0FFFF;
+    /*text-align: center;*/
+    font-size: 1.5em;
+    padding: 15px;
+    justify-content: flex-start;
+    
+
+
+}
+
+@media only screen and (max-device-width: 1000px) {
+    .container { width:700px; } 
+}
+
+
+.hf {
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.hinterno {
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
