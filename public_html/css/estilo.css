@@ -1,4 +1,4 @@
-*{
+﻿*{
     padding:0;
     margin:0;
 }
@@ -236,4 +236,16 @@
     font-weight: bold;
 }
 
-
+code{
+overflow:auto;  /* barra de rolagem*/
+background:#XXXXXX url(ENDEREÇO-DA-IMAGEM) ;  /* edite cor de fundo*/
+border:1px solid #XXXXXX;  /* edite cor e tipo de borda */
+color:#XXXXXX;  /* cor da fonte*/
+font-size:150%;  /* tamanho da fonte */
+height:100px; /* edite a altura máxima da caixa*/
+display:block;
+white-space:pre;
+text-align:left;
+word-wrap:break-word;
+padding:0 10px 5px 20px;
+}
