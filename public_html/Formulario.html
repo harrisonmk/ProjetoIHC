@@ -18,22 +18,22 @@ and open the template in the editor.
         
     <center>
         
-        <form action="index.html" method="post">
+        <form action="index.html" method="post" onsubmit="return validarDados() ? true : false">
 
             
             
            <fieldset class="tratarFieldset" id="usuario" > <legend>Dados Pessoais</legend> 
             
             <label for="nome">Nome:</label></br>
-           <input type="text" id="nome" /></br>
+           <input type="text" id="nome" name="nome"/></br>
         
         
         
         <label for="rg">RG:</label></br>
-           <input type="text" id="rg" /></br>
+           <input type="text" id="rg" name="rg"/></br>
            
            <label for="cpf">CPF:</label></br>
-           <input type="text" id="cpf" /></br>
+           <input type="text" id="cpf" name="cpf"/></br>
            
                       <label>Estado Civil: </label></br>
            <select name="estadocivil" id="estadocivil">
@@ -107,10 +107,10 @@ and open the template in the editor.
        <fieldset class="tratarFieldset" id="dados"> <legend>Dados da conta</legend>      
             
          <label for="email">Email:</label></br>
-        <input type="email" id="email" /></br>
+        <input type="email" id="email" name="email"/></br>
         
          <label for="senha">Senha:</label></br>
-         <input type="password" id="senha" /></br>
+         <input type="password" id="senha" name="senha"/></br>
            
         
         
@@ -121,16 +121,16 @@ and open the template in the editor.
         <fieldset class="tratarFieldset" id="contato"> <legend>Contato</legend> 
         
          <label for="endereco">Endereço:</label></br>
-           <input type="text" id="endereco" /></br>
+           <input type="text" id="endereco" name="endereco"/></br>
            
             <label for="cidade">Cidade:</label></br>
-           <input type="text" id="cidade" /></br>
+           <input type="text" id="cidade" name="cidade"/></br>
            
             <label for="estado">Estado:</label></br>
-           <input type="text" id="estado" /></br>
+           <input type="text" id="estado" name="cidade"/></br>
            
             <label for="telefone">Telefone:</label></br>
-           <input type="tel" id="telefone" pattern="^\d{3}-\d{5}-\d{4}$"/></br>
+           <input type="tel" id="telefone" name="telefone" pattern="^\d{3}-\d{5}-\d{4}$"/></br>
            
            
         
@@ -143,6 +143,57 @@ and open the template in the editor.
 
             
         </form>
+        
+        <script type="text/javascript" >
+        function validarDados() {
+
+
+            var nome = document.getElementById("nome").value;
+            var rg = document.getElementById("rg").value;
+            var cpf = document.getElementById("cpf").value;
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+            var endereco = document.getElementById("endereco").value;
+            var cidade = document.getElementById("cidade").value;
+            var estado = document.getElementById("estado").value;
+            var telefone = document.getElementById("telefone").value;
+
+
+            if (nome == '') {
+                alert('Informe seu nome!');
+                return false;
+            } else if (rg == '') {
+                alert('Informe seu RG!');
+                return false;
+            } else if (cpf == '') {
+                alert('Informe seu cpf!');
+                return false;
+            }else if (email == '') {
+                alert('Informe seu email!');
+                return false;
+            }
+            else if (senha == '') {
+                alert('Informe sua senha!');
+                return false;
+            }else if (endereco == '') {
+                alert('Informe seu endereco!');
+                return false;
+            }
+            else if (cidade == '') {
+                alert('Informe sua cidade!');
+                return false;
+            }else if (estado == '') {
+                alert('Informe seu estado!');
+                return false;
+            }else if (telefone == '') {
+                alert('Informe seu telefone!');
+                return false;
+            }
+            
+
+            return true;
+        }
+    </script>
         
         </center>
         
